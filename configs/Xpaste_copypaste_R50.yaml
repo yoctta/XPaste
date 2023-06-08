@@ -1,0 +1,22 @@
+_BASE_: "../Base-C2_L_R5021k_640b64_4x.yaml"
+SOLVER:
+  MAX_ITER: 180000
+  CHECKPOINT_PERIOD: 30000
+  IMS_PER_BATCH: 64
+  BASE_LR: 0.0001
+  MODEL_EMA: 0.999
+DATASETS:
+  TRAIN: ("lvis_v1_train",)
+  TEST: ("lvis_v1_val",)
+
+INPUT:
+  INST_POOL: true
+  INST_POOL_PATH: "/mnt/data/LVIS_instance_pools.json"
+  INST_POOL_FORMAT: "RGBA"
+  USE_COPY_METHOD: "both"
+  USE_INSTABOOST: false
+  MASK_FORMAT: bitmask
+  CP_METHOD: ['basic']
+  RANDOM_ROTATE: false
+  INST_POOL_SAMPLE_TYPE: "cas_random"
+  TRAIN_SIZE: 640

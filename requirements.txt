@@ -1,0 +1,15 @@
+opencv-python
+timm==0.4.9
+dataclasses
+ftfy
+regex
+fasttext
+scikit-learn
+lvis
+fvcore
+nltk
+albumentations
+git+https://github.com/openai/CLIP.git
+git+https://github.com/lvis-dataset/lvis-api.git
+instaboostfast
+detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu113/torch1.10/index.html

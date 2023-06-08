@@ -1,0 +1,18 @@
+_BASE_: "Base-C2_L_R5021k_640b64_4x.yaml"
+MODEL:
+  ROI_BOX_HEAD:
+    USE_ZEROSHOT_CLS: False
+  WEIGHTS: "/mnt/home/Detic/models/swin_large_patch4_window12_384_22k.pkl"
+  BACKBONE:
+    NAME: build_swintransformer_fpn_backbone
+  SWIN:
+    SIZE: L-22k-384
+  FPN:
+    IN_FEATURES: ["swin1", "swin2", "swin3"]
+SOLVER:
+  MAX_ITER: 360000
+  CHECKPOINT_PERIOD: 40000
+  IMS_PER_BATCH: 8
+  BASE_LR: 0.00005
+INPUT:
+  TRAIN_SIZE: 896
