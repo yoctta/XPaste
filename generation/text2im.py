@@ -105,7 +105,7 @@ def gen_image(cls_info,method='latent',batch_size=10,total=100,output_path='/mnt
     offset=0
     while 1:
         if method=='diffusers':
-            latents=pipe(text, num_inference_steps=50, guidance_scale=7.5,num_images_per_prompt=batch_size).images
+            latents=pipe(text, num_inference_steps=50, guidance_scale=7.5,num_images_per_prompt=batch_size,output_type='latent').images
             latents = 1 / pipe.vae.config.scaling_factor * latents
             im = pipe.vae.decode(latents).sample
         else:
