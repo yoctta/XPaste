@@ -32,7 +32,7 @@ python tools/convert-thirdparty-pretrained-model-to-d2.py --path swin_base_patch
 
 ```
 cd generation
-pip install -U diffusers transformers
+pip install -U diffusers transformers xformers
 python text2im.py --model diffusers --samples 100 --category_file /mnt/data/LVIS/lvis_v1_train.json --output_dir /mnt/data/LVIS_gen_FG
 ```
 
