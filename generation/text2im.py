@@ -7,7 +7,7 @@ import sys,os
 import torch
 import torch.nn.functional as F
 import torch.multiprocessing as mp
-from diffusers from diffusers import StableDiffusionPipeline,DPMSolverMultistepScheduler
+from diffusers import StableDiffusionPipeline,DPMSolverMultistepScheduler
 import tqdm
 import clip
 import cv2
