@@ -1,5 +1,5 @@
 import numpy as np
-from detic.data.transforms.possion_blending import poisson_edit
+from xpaste.data.transforms.possion_blending import poisson_edit
 import random
 import cv2
 def blend_image(dst_img,src_img,composed_mask,cp_method):

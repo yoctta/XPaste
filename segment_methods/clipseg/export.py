@@ -8,7 +8,9 @@ from matplotlib import pyplot as plt
 import importlib
 import cv2
 import sys
-sys.path.append('./matteformer')
+import os
+sys.path.append(os.path.join(os.getcwd(),'clipseg','matteformer'))
+
 from matteformer.inference import build_model,matting
 
 class clipseg_matting:

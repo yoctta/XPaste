@@ -13,7 +13,7 @@ import json
 
 from detectron2.utils.comm import get_world_size, is_main_process
 from detectron2.utils.logger import log_every_n_seconds
-from detic.evaluation.per_class_map import _derive_coco_results
+from xpaste.evaluation.per_class_map import _derive_coco_results
 
 class DatasetEvaluator:
     """

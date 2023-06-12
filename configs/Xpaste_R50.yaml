@@ -13,7 +13,7 @@ INPUT:
   INST_POOL: true
   INST_POOL_PATH: "/mnt/data/LVIS_instance_pools.json"
   INST_POOL_FORMAT: "RGBA"
-  USE_COPY_METHOD: "both"
+  USE_COPY_METHOD: "syn_copy"
   USE_INSTABOOST: false
   MASK_FORMAT: bitmask
   CP_METHOD: ['basic']

@@ -38,23 +38,23 @@ def init(args,rank=None):
         transforms.CenterCrop(n_px),
         transforms.Normalize((0.48145466, 0.4578275, 0.40821073), (0.26862954, 0.26130258, 0.27577711)),
     ])
-    if args.modal=='clipseg':
+    if args.seg_method=='clipseg':
         sys.path.insert(0,os.path.join(os.getcwd(),'clipseg'))
         from export import clipseg_matting
         seg_model=clipseg_matting(device)
-    elif args.modal=='UFO':
+    elif args.seg_method=='UFO':
         sys.path.insert(0,os.path.join(os.getcwd(),'UFO'))
         from export import UFO
         seg_model=UFO(device)
-    elif args.modal=='selfreformer':
+    elif args.seg_method=='selfreformer':
         sys.path.insert(0,os.path.join(os.getcwd(),'SelfReformer'))
         from export import selfreformer
         seg_model=selfreformer(device)
-    elif args.modal=='U2Net':
+    elif args.seg_method=='U2Net':
         sys.path.insert(0,os.path.join(os.getcwd(),'U-2-Net'))
         from export import u2net 
         seg_model=u2net(device)
-    elif args.modal=='full':
+    elif args.seg_method=='full':
         class fullmask:
             def __init__(self):
                 pass
@@ -118,6 +118,7 @@ if __name__=="__main__":
     parser.add_argument('--output_dir', type=str)
     parser.add_argument('--seg_method', type=str)
     parser.add_argument('--batch_size', type=int, default=5)
+    parser.add_argument('--samples', type=int, default=100)
     args = parser.parse_args()
     output_path=os.path.join(args.output_dir,args.seg_method)
     mp.set_start_method('spawn',force=True)

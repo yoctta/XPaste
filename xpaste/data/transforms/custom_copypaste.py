@@ -8,7 +8,7 @@ from detectron2.data.transforms.augmentation_impl import RandomRotation
 from detectron2.structures import Boxes, ImageList, Instances, pairwise_iou, BoxMode
 from detectron2.evaluation.coco_evaluation import instances_to_coco_json
 import detectron2.utils.comm as comm
-from detic.data.transforms.custom_cp_method import blend_image
+from xpaste.data.transforms.custom_cp_method import blend_image
 import math
 import json
 import cv2

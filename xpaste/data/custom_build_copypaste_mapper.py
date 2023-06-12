@@ -9,7 +9,7 @@ from detectron2.data import detection_utils as utils
 from detectron2.data import transforms as T
 import detectron2.utils.comm as comm
 from detectron2.structures import BitMasks, Boxes, Instances
-from detic.data.transforms.custom_cp_method import blend_image
+from xpaste.data.transforms.custom_cp_method import blend_image
 import numpy as np
 import os
 import torch
@@ -95,7 +95,7 @@ class InstPool:
             with open(json_file) as f:
                 self.per_cat_pool=json.load(f)
             self.per_cat_pool={int(i):self.per_cat_pool[i] for i in self.per_cat_pool}
-            with open('datasets/lvis/area_mean_std2.json') as f:
+            with open('datasets/metadata/area_mean_std2.json') as f:
                 self.HWms=json.load(f)
             self.cats= list(self.per_cat_pool.keys())
             self.data_to_cat={}
@@ -765,13 +765,13 @@ class CopyPasteMapper:
             visualizer = Visualizer(img.permute(1,2,0), metadata=None)
             img_id=result['file_name'].split('/')[-1][:-4]
             #os.system('cp {} show_train/'.format(result['file_name']))
-            visualizer.output.save(os.path.join(self.img_save_dir,'%s_origin.jpg'%img_id))
+            visualizer.output.save(os.path.join('show_train','%s_origin.jpg'%img_id))
             vis = visualizer.overlay_instances(
                 #boxes=inst_pred.gt_boxes,
                 labels=inst_pred.gt_classes.tolist(),
                 #assigned_colors=[(0,0,0)]*origin_instances+[(0,0,1)]*(len(result['instances'].gt_classes)-origin_instances))
                 masks=inst_pred.gt_masks,)
-            vis.save(os.path.join(self.img_save_dir,'%s_anno.jpg'%img_id))
+            vis.save(os.path.join('show_train','%s_anno.jpg'%img_id))
             # import pdb
             # pdb.set_trace()
             # import cv2

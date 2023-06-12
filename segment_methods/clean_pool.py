@@ -57,8 +57,8 @@ def work(part):
     del part['output']
     for i in part:
         print(i)
-        os.makedirs(os.path.join(output_path,'images',i),exist_ok=True)
-    res= {i:filter_none([subwork(j,os.path.join(output_path,'images',i,'{}.png'.format(c))) for c,j in enumerate(part[i])]) for i in part}
+        os.makedirs(os.path.join(output_path,'images',str(i)),exist_ok=True)
+    res= {i:filter_none([subwork(j,os.path.join(output_path,'images',str(i),'{}.png'.format(c))) for c,j in enumerate(part[i])]) for i in part}
     print('done',{i:len(res[i]) for i in res})
     return res
 
