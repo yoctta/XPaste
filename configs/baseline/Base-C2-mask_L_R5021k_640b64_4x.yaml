@@ -3,7 +3,7 @@ MODEL:
   MASK_ON: True
   PROPOSAL_GENERATOR:
     NAME: "CenterNet"
-  WEIGHTS: "/mnt/home/Detic/models/resnet50_miil_21k.pkl"
+  WEIGHTS: "models/resnet50_miil_21k.pkl"
   BACKBONE:
     NAME: build_p67_timm_fpn_backbone
   TIMM:

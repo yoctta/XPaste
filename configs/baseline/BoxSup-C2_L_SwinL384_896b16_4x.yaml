@@ -2,7 +2,7 @@ _BASE_: "Base-C2_L_R5021k_640b64_4x.yaml"
 MODEL:
   ROI_BOX_HEAD:
     USE_ZEROSHOT_CLS: False
-  WEIGHTS: "/mnt/home/Detic/models/swin_large_patch4_window12_384_22k.pkl"
+  WEIGHTS: "models/swin_large_patch4_window12_384_22k.pkl"
   BACKBONE:
     NAME: build_swintransformer_fpn_backbone
   SWIN:
