@@ -86,6 +86,10 @@ Right: baseline (Swin-L)
 
 We use code from [Detic](https://github.com/facebookresearch/Detic), [CenterNet2](https://github.com/xingyizhou/CenterNet2) and [Detectron2](https://github.com/facebookresearch/detectron2)
 
+## Lisence 
+
+The majority of our X-Paste is licensed under the Apache 2.0 license, portions of the project are available under separate license terms: SWIN-Transformer, CLIP, and TensorFlow Object Detection API are licensed under the MIT license; UniDet and Detic are licensed under the Apache 2.0 license; Stable Diffusion is lisenced under CreativeML Open RAIL M License and the LVIS API is licensed under a custom license. If you later add other third party code, please keep this license info updated, and please let us know if that component is licensed under something other than CC-BY-NC, MIT, or CC0
+
 ## Citation
 
 X-Paste: Revisiting Scalable Copy-Paste for Instance Segmentation using CLIP and StableDiffusion
