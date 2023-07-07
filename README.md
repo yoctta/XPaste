@@ -77,10 +77,10 @@ Right: baseline (Swin-L)
 ## Models (LVIS dataset)
 | Backbone  | method | $AP^{box}$ | $AP^{mask}$ | $AP_r^{box}$ | $AP_r^{mask}$ | checkpoint |
 |:--------:|:----------:|:----------:|:-----------:|:------------:|:-------------:|:-------------:|
-| ResNet50  | baseline |    34.5    |     30.8    |     24.0     |      21.6    | [model]() |
-| ResNet50  | X-Paste  |    36.7    |     33.0    |     29.6     |      27.8     | [model]() |
-|  Swin-L  | baseline |    47.5    |     42.3    |     41.4    |      36.8     | [model]() |
-|  Swin-L  | X-Paste  |    50.9    |     45.4    |     48.7     |      43.8    | [model]() |
+| ResNet50  | baseline |    34.5    |     30.8    |     24.0     |      21.6    | [model](https://drive.google.com/drive/folders/1vVwrZ4ad0xiWVO-JLaxRdLMDq4vdRZwT?usp=sharing) |
+| ResNet50  | X-Paste  |    37.4    |     33.2    |     33.9     |      29.7     | [model](https://drive.google.com/drive/folders/1vVwrZ4ad0xiWVO-JLaxRdLMDq4vdRZwT?usp=sharing) |
+|  Swin-L  | baseline |    47.5    |     42.3    |     41.4    |      36.8     | [model](https://drive.google.com/drive/folders/1vVwrZ4ad0xiWVO-JLaxRdLMDq4vdRZwT?usp=sharing) |
+|  Swin-L  | X-Paste  |    50.9    |     45.4    |     48.7     |      43.8    | [model](https://drive.google.com/drive/folders/1vVwrZ4ad0xiWVO-JLaxRdLMDq4vdRZwT?usp=sharing) |
 
 ## Acknowledgements
 
