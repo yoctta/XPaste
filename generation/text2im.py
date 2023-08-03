@@ -152,7 +152,7 @@ if __name__=="__main__":
     if args.resume:
         old=os.listdir(PATH)
         cls_names=[j['name'] for j in target_class]
-        for i in cls_names:
+        for i in old:
             try:
                 _=cv2.imread(os.path.join(PATH,f"{i}_{args.samples-1}.png"))
                 cls_names.remove(i)
